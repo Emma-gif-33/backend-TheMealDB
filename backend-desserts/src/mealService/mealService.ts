@@ -25,8 +25,6 @@ const transformIngredients = (meal: any): Ingredient[] => {
     return ingredients;
 };
 
-// --- SERVICIOS ---
-
 // 1. Extraer info de los postres
 export const getAllDesserts = async (): Promise<RecipeSummary[]> => {
     const { data } = await axios.get(`${BASE_URL}/filter.php?c=Dessert`);
@@ -74,7 +72,6 @@ export const getRecipeById = async (id: string): Promise<RecipeDetail | null> =>
     };
 };
 
-//muestra de la receta random
 export const fetchRandom = async (): Promise<RecipeDetail> => {
     const { data } = await axios.get(`${BASE_URL}/random.php`);
     const m: MealDBDetail = data.meals[0];

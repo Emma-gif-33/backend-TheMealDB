@@ -5,7 +5,7 @@ import * as MealService from '../mealService/mealService.js';
 export const getMeals = async (req: Request, res: Response) => {
     const { s, f, i, c } = req.query;
 
-    try {
+    try { //creo que acá iba mejor un swtich-
         let data;
         if (s) {
             data = await MealService.searchByName(String(s));
