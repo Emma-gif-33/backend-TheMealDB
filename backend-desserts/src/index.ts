@@ -14,7 +14,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/meals', mealRoutes)
-app.get('/test', (_req, res) => res.send('El servidor responde correctamente'));
 app.use('/api/search', searchRoutes)
 
 app.listen(PORT, () => {
